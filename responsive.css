@@ -1,0 +1,104 @@
+@media only screen and (max-width: 1000px) {
+    .container .title .content {
+        width: 675px;
+        margin: auto;
+        padding: 75px 0;
+        text-align: center;
+    }
+  }
+  @media only screen and (max-width: 725px) {
+    .container .title .content {
+        width: 485px;
+        margin: auto;
+        padding: 75px 0;
+        text-align: center;
+    }
+    .container .title .content h1 {
+        width: 511px;
+        margin: auto;
+        font-size: 3.1rem;
+        text-align: center;
+    }
+    .container .title .content h2 {
+        width: 487px;
+        margin: auto;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+  }
+  @media only screen and (max-width: 630px) {
+    container .title {
+      padding: 0px 40px;
+    }
+    .container .title .contentr h1 {
+      display: none;
+  }
+  }
+
+  @media only screen and (max-width: 560px) {
+    .container .title .content {
+        width: 450px;
+        margin-left: auto;
+        margin-top: -36px;
+        align-content: center;
+    }
+    .container .title .content h1 {
+        width: 376px;
+        margin: auto;
+        font-size: 3.1rem;
+        text-align: center;
+    }
+    .container .title .content h2 {
+        width: 387px;
+        margin: auto;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .footer {
+        display: block;
+    }
+
+  }   
+  
+
+  @media screen and (max-width: 770px){
+    .contact-box{
+      grid-template-columns: 1fr;
+      margin: 0px 130px;
+      padding: 10px 0px;
+    }
+    .cleft{
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 575px){
+    .contact-box{
+      grid-template-columns: 1fr;
+      margin: 0px 80px;
+      padding: 10px 0px;
+    }
+    .cleft{
+      height: 200px;
+    }
+    .container .navbar .left img {
+      height: 100px;
+      width: 200px;
+      position: absolute;
+      left: 35px;
+    }
+  }
+  @media screen and (max-width: 411px){
+    .contact-box{
+      grid-template-columns: 1fr;
+      margin: 0px 15px;
+      padding: 10px 0px;
+    }
+    .cleft{
+      height: 200px;
+    }
+    .faq-heading {
+      border-bottom: #777;
+      padding: 20px 60px;
+      margin-top: 160px;
+    }
+  }
