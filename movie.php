@@ -19,7 +19,6 @@ if (isset($_POST['submit'])) {
       echo"<link href='https://vjs.zencdn.net/7.14.3/video-js.css' rel='stylesheet' />";
     echo"</head>";
     echo"<body>";
-
         echo"<div class='jumbotron-fluid'>";
         echo"<div class='container'>";
         while($result = mysqli_fetch_assoc($records)){
@@ -49,7 +48,7 @@ if (isset($_POST['submit'])) {
     		      controls
     		      preload='auto'
     		      width='720'
-    		      height='440'
+    		      height='640'
     		      poster='uploads/".$result['imgpath']."'
     		      data-setup='{}'
   		        >

@@ -1,10 +1,11 @@
+
 @media only screen and (max-width: 1000px) {
     .container .title .content {
         width: 675px;
         margin: auto;
         padding: 75px 0;
         text-align: center;
-    }
+    }  
   }
   @media only screen and (max-width: 725px) {
     .container .title .content {
@@ -102,3 +103,4 @@
       margin-top: 160px;
     }
   }
+

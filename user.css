@@ -171,3 +171,49 @@ ul{
 	background-color: #ffffff;
 }
 
+@media only screen and (max-width: 1990px) and (min-width: 1160px) {
+
+  .mobile{
+    display: none !important;
+  }
+  
+}
+@media only screen and (max-width: 1160px) and (min-width: 250px) {
+
+  .desktop{
+    display: none !important;
+  }
+  
+}
+.contact-boxs{
+  margin: 150px  180px;
+  padding: 15px 0px;
+  max-width: auto;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center !important;
+  text-align: center;
+  background-color: cadetblue;
+  box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+  border-radius: 2%;
+}
+.namea {
+  background-color: black;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 30px -18px;
+  padding: 10px 0px;
+}
+.bordera{
+  font-weight: 400;
+  color: #ffffff;
+  margin: 100px 100px;
+  padding: 5px 10px;
+  border: 2px solid;
+  border-radius: 1%;
+}
+.set{
+  margin: 0px 100px;
+  padding: 10px 2px;
+  align-items: left !important;
+}

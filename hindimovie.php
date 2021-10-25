@@ -26,10 +26,10 @@ session_start();
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-bars"></i></a>
                         <div class="overlay-content">
                             <a href="homepage.php">All Movies</a>
-                            <a href="englishmovie.php">English Movie</a>
+                            <a href="englishovie.php">English Movie</a>
                             <a href="hindimovie.php">Hindi Movie</a>
                             <a href="banglamovie.php">Bangla Movie</a>
-                            <a href="othersmovies.php">Others Movie</a>
+                            <a href="othermovie.php">other Movie</a>
                             <a href="#">English Serise</a>
                             <a href="#p">Hindi Serise</a>
                             <a href="#">Bangla Serise</a>
@@ -89,53 +89,43 @@ session_start();
      </header>
       
      <section>
-        <?php
-        echo"
-        <div class='jumbotrons' style='margin-top:6px;padding-top:15px;padding-bottom:15px;'>
-                <div class='row'>
-                  <div class='col'>
-                    <form action='movie.php' method='POST'>
-                    <h4 style='color:red;font-size:30px;'>Recent :
-                    <input type='submit' name='submit' class='btn btn-success' style='display:inline;width:200px;margin-left:20px;margin-right:20px;' value='".ucwords($rel2['name'])."'/></h4>
-                    </form>
-                  </div>
-                  <div class='col'>
-                    <form action='search.php' method='POST'>
-                      <select  name='option' style='padding:5px;'>
-                        <option selected>Search By</option>
-                        <option value='name'>Name</option>
-                        <option value='genre'>Genre</option>
-                        <option value='rdate'>Release year</option>
-                      </select>
-                      <input type='text' placeholder='Enter..' style='margin-left:10px;margin-top:10px;padding:5px;' name='textoption'>
+          <div class="jumbotrons">
+            <h2 style='margin-top:0px;padding-top:0px;'>Hindi Movies</h2>
+              <div class="row">
+              <?php
+                include 'database.php';
 
-                      <input type='submit' name='submit' class='btn btn-success' style='display:inline;width:100px;margin-left:20px;margin-right:20px;margin-top:5px;' value='Search'/></h4>
-                    </form>
-                  </div>
-                </div>
-          </div>";
-          ?>
-          <div class="jumbotrons">
-            <h2 style='margin-top:0px;padding-top:0px;'>Most Popular</h2>
-              <div class="row">
-                <?php 
-                  include 'recent-fetcher.php';
-                ?>
+
+                  $im = "SELECT * FROM movies WHERE genre LIKE 'hindi%'" ;
+                  $records = mysqli_query($conn,$im);
+
+                  start:
+                  $i=0;
+
+                  echo"<div class='row'>";
+                    while($result = mysqli_fetch_assoc($records)){
+                      echo"<form action='movie.php' method='POST'>";
+                      echo"<div class='col'>";
+                      echo "<img src='uploads/".$result['imgpath']."' height='250' width='200' style='margin-top: 30px;margin-left:15px;margin-right:15px;' />";
+                        echo"<div class='noob'>";
+                          echo "<input type='submit' name='submit' class='btn btn-outline-info' style='display:block;width:200px;padding-bottom:15px;margin-bottom:30px;margin-left:15px;margin-right:15px;' value='".ucwords($result['name'])."'/>";
+                        echo"</div>";
+                      echo"</div>";
+                      echo"</form>";
+
+                      if ($i==4) {
+
+                        echo"</div>";
+
+                        goto start;
+                      }
+                      $i++;
+                    }
+                    echo"</div>";
+                    ?>
+
+
           </div>
-      </div>
-          <div class="jumbotrons">
-            <h2 style='margin-top:0px;padding-top:0px;'>Recent Release</h2>
-              <div class="row">
-                <?php 
-                  include 'latest-fetcher.php';
-                ?>
-          </div>
-      </div>
-      <div class="jumbotrons">
-        <h2>  All movies</h2>
-          <?php
-            include 'fetcher.php';
-            ?>
       </div>
 
     </section>

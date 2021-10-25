@@ -27,7 +27,6 @@ session_start();
        </nav>
 
        <div class="container">
-
          <div class="jumbotron">
            <h1>Create an account</h1>
            <p>It's free and always will be. </p> <br>

@@ -3,10 +3,10 @@ body{
   background-color: black;
 }
 .jumbotron-fluid{
-  background-color: #2d2f33;
+  background-color: #0c0c0c;
   color: #e2dd31;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 0%;
+  margin-right: 0%;
   height: 180vh !important;
 }
 .jumbotron-fluid h1:hover{

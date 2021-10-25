@@ -22,7 +22,7 @@ session_start();
             </div>
             <div class="right">
                 <div id="myNav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-bars"></i></a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><b><i class="fas fa-bars"></i></b></a>
                         <div class="overlay-content">
                             <a href="login.php">Login</a>
                             <a href="register.php">Register</a>
@@ -41,10 +41,10 @@ session_start();
                 <h3>Ready to watch? <br> <br></h3>
                 <div class="action">
                         <div class="start">
-                        <button><a href="login.php">Get Started</a></button>
+                        <button><a href="register.php">Get Started</a></button>
                     </div>
                 </div>
-                <h3><br> Login or Register for our services! </h3>
+                <h3><br> <a href="login.php">Login </a> or Register for our services! </h3>
             </div>
         </div>
     </div>
